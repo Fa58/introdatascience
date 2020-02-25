@@ -1,3 +1,3 @@
-##This is a markdown file
-##HELLO WORLD
-##It is great to be alive and be part of humanity
+## This is a markdown file
+## HELLO WORLD
+## It Is GREAT to be alive and be a part of humanity
