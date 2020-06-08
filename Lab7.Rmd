@@ -1,0 +1,124 @@
+---
+title: "Lab7"
+author: "Asfadhia Zulkifly"
+date: "5/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Lab 7 WIE180007 R Markdown
+
+
+1. See basic descriptive
+
+```{r attitude}
+library(datasets)
+summary(attitude)
+```
+
+ * a)	What is the difference between (attitude[4]) and (attitude$learning)
+
+     * attitude$learning
+          * returns all of the values in the column labeled learning. 
+
+     * attitude[4]
+          * return all values in column index position ‘4’
+
+```{r}
+attitude[4]
+(attitude$learning)
+```
+
+2. Lists name of variables in dataset
+
+```{r}
+ls(attitude)
+```
+
+
+3. Calculate number of row in dataset
+
+```{r}
+nrow(attitude)
+```
+
+4. Calculate number of columns in a dataset
+
+```{r}
+ncol(attitude)
+```
+
+5.	List structure of a dataset
+
+```{r}
+str(attitude)
+```
+
+6. See first 6 rows (by default) of dataset
+
+```{r}
+head(attitude)
+```
+
+7.	See first n rows of dataset
+      * Select to see the first 15 rows of dataset
+```{r}
+head(attitude, n=15)
+```
+
+8. See all rows but not the last row
+
+```{r}
+head(attitude, n=-1)
+```
+
+9.	See last 6 rows (by default) of dataset
+
+```{r}
+tail(attitude)
+```
+
+10.	See last n rows of dataset
+      * Select to see the last 12 rows of dataset.
+
+```{r}
+tail(attitude, n=12)
+```
+
+11.	See the last n rows but not the first row
+
+```{r}
+tail(attitude, -1)
+```
+
+12.	Number of missing values
+      * Which function will returns number of missing values in each variable of a dataset?
+
+```{r}
+sapply(attitude, function(attitude) sum(is.na(attitude)))
+```
+
+13.	Number of missing values in a single variable
+
+```{r}
+length(attitude[is.na(attitude)])
+```
+
+14.	Plot a simple graph, which will appear on a screen device.
+
+```{r}
+plot(attitude) 
+```
+
+15.	Plot the graph shown below, and make it appear on a file device (a pdf file)
+
+```{r}
+pdf(file="lab7plot.pdf")
+with(attitude, plot(privileges, learning, main="Learning Attitude"))
+```
+
+

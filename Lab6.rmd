@@ -1,0 +1,120 @@
+---
+title: "Lab6"
+author: "Asfadhia Zulkifly"
+date: "May, 2020"
+output: html_document
+---
+# My First knitr document  
+# Asfadhia 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. 
+This are some of the codes that I have learned in R programming
+
+## Print Ouput in R
+
+By using print() function, for example:
+
+```{r}
+print("Hello, this is my first R Markdown file")
+```
+
+
+
+## Take input from users
+
+By using readline() function and take input from user terminal, for example:
+
+```{r}
+my.name <- readline(prompt="Enter name: ")
+my.email <- readline(prompt="Enter email: ")
+```
+
+
+## If & Else 
+ example:
+
+```{r}
+z<-4
+  if(z>2){
+  a<-1
+}else{
+  a<-0
+}
+a
+
+```
+
+## Operations Vector
+```{r}
+a = c(2,4,6,3,1,5)
+b = sort(a)
+c = sort(a,decreasing = TRUE)
+a
+b
+c
+
+```
+
+## Find min & max in vector
+
+```{r}
+min(a)
+max(b)
+
+```
+
+## Data Frames
+###  is a table or a two-dimensional array-like structure
+ example:
+
+```{r}
+BMI<-data.frame(
+  gender = c("Male","Female"),
+  height = c(178, 152),
+  weight = c(67, 45),
+  age    = c(20, 18)
+)
+print(BMI)
+
+```
+
+## There are 3 ways to create a codebook
+
+1. Creating codebook using R API
+
+2. Automatically generate, using dataMaid
+
+3. Manually create
+
+## Functions in creating custom codebook
+
+Manually:
+```{r y}
+class(women)
+sapply(women,class)
+sapply(women, min)
+sapply(women, max)
+sapply(women, range)
+```
+
+### Function to show summary
+
+```{r women}
+summary(women)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r test, echo=FALSE}
+plot(women)
+```
+
+
